@@ -40,16 +40,17 @@ const SearchBar = () => {
                     onChange={searchChange}/>
             </div>
             <div className='mainContainer'>
-                    {productosFiltrados.map((product) => (
-                        <>
-                            <div className='contenedorCardsProducts'>
-                                <h3>{product.title}</h3>
-                                <p>${product.price}</p>
-                                <img src={product.image} alt={product.title} width="100" />
-                                
-                            </div>
-                        </>
-                    ))}
+                {productosFiltrados.length > 0 ? (
+                    productosFiltrados.map((product) => (
+                        <div className='contenedorCardsProducts'>
+                            <h3>{product.title}</h3>
+                            <p>${product.price}</p>
+                            <img src={product.image} alt={product.title} width="100" />
+                        </div>
+                    ))
+        ) : (
+            <h2>No se encontraron productos.</h2>
+        )}
             </div>
         </>
     );
