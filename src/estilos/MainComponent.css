@@ -1,0 +1,53 @@
+.imgCatalogo{
+    box-sizing: border-box;
+    width: 100%;
+    height: 300px;
+    border-radius: 10%;
+}
+
+.contenedorCards{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap ;
+    justify-content: center;
+}
+
+
+
+.contenedorCatalogo{
+    width: 300px;
+    margin: 50px;
+    background-color: #0009;
+    border-radius: 50px;
+    padding: 20px;
+    transition: all .25s;
+}
+
+.contenedorCatalogo:hover{
+    transform: translateY(-3px);
+    box-shadow: 10px 0 30px #ddd9;
+}
+
+.inputNumber{
+    padding: 7px;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    border-bottom: 4px solid #48e9;
+    border-left: 4px solid  #48e9;
+}
+.input:focus{
+    outline: none;
+}
+
+.inputNav{
+    padding: 15px ;
+    width: 50%;
+    border-radius: 50px;
+    border: none;
+}
+
+.inputNav:focus{
+    outline: none;
+}
