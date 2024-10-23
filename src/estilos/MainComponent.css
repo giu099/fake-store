@@ -11,6 +11,7 @@
     flex-direction: row;
     flex-wrap:wrap ;
     justify-content: center;
+    margin-bottom: 200px ;
 }
 
 
@@ -26,7 +27,7 @@
 
 .contenedorCatalogo:hover{
     transform: translateY(-3px);
-    box-shadow: 10px 0 30px #ddd9;
+    box-shadow: 10px 0 30px #48e9;
 }
 
 .inputNumber{
@@ -46,6 +47,7 @@
     width: 50%;
     border-radius: 50px;
     border: none;
+    margin-top: 100px;
 }
 
 .inputNav:focus{

@@ -2,14 +2,16 @@ import React from "react";
 import { useState,useEffect } from "react";
 import axios from "axios";
 import "../estilos/MainComponent.css";
+import SearchBar from "./SearchBar";
+
 
 
 
 
 function MainComponent (){
     const [productos,setProductos] = useState([]);
+    const [search, setSearch] = useState('')
     const [limit, setLimit] = useState(1)
-    const [busqueda, setBusqueda] = useState('')
     let baseURL = 'https://fakestoreapi.com/products?limit=1';
 
     useEffect(()=>{
@@ -25,15 +27,9 @@ function MainComponent (){
     
     };
 
-
-    const busquedaFiltrar = (event) => {
-        setBusqueda(event.target.value);
-    };
-
-
     return (
         <>
-            <input type="text" className="inputNav" onChange={busquedaFiltrar} />
+            
             <h1>Fakestore</h1> 
             <h2>Ingrese la cantidad de productos que desea ver del 1 al 19</h2>
             <input className='inputNumber' type="number" onChange={limitChange}/>
@@ -51,6 +47,7 @@ function MainComponent (){
                 </>
             ))}
             </div>
+            <SearchBar/>
         </>
     );
 };
