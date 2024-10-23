@@ -1,0 +1,45 @@
+nav{
+    text-align: start;
+    background-color: #FFEFD5;
+    margin: 0;
+    padding: 20px;
+    color: #000;
+    border-radius: 10px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+h1{
+    margin: 0;
+    color:#666 ;
+}
+
+ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px;
+}
+
+.containList{
+    display: flex;
+    gap: 20px;
+}
+
+
+a{
+    text-decoration: none;
+    color: #000;
+    background-color: #FFE4B5;
+    padding: 10px;
+
+    transition: box-shadow .25s,border-radius .25s;
+}
+
+a:hover{
+    box-shadow: 0 0 5px #3334;
+    border-radius: 30px;
+}

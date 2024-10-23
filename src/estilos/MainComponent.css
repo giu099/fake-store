@@ -1,55 +1,75 @@
-.imgCatalogo{
-    box-sizing: border-box;
-    width: 100%;
-    height: 300px;
-    border-radius: 10%;
-}
-
-.contenedorCards{
-    width: 100%;
-    display:flex;
-    flex-direction: row;
-    flex-wrap:wrap ;
-    justify-content: center;
-    margin-bottom: 100px ;
+body{
+    text-align: center;
 }
 
 
 
-.contenedorCatalogo{
-    width: 300px;
-    margin: 50px;
-    background-color: #0009;
-    border-radius: 50px;
-    padding: 20px;
-    transition: all .25s;
-}
 
-.contenedorCatalogo:hover{
-    transform: translateY(-15px);
-    box-shadow: 10px 0 30px #48e9;
-}
 
 .inputNumber{
-    padding: 7px;
-    border-radius: 7px;
+    background-color: #FFEFD5;
+    width: 500px;
+    padding: 10px;
+    border-radius: 10px;
     outline: none;
     border: none;
-    border-bottom: 4px solid #48e9;
-    border-left: 4px solid  #48e9;
+    border-bottom: 4px solid #b29260 ;
+    color: #000;
+    margin-right: 10px;
+    margin-top: 50px;
 }
 .input:focus{
     outline: none;
 }
 
-.inputNav{
-    padding: 15px ;
-    width: 50%;
-    border-radius: 50px;
-    border: none;
-    margin-top: 100px;
+.mainContainer{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap ;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 
-.inputNav:focus{
+
+.contenedorCardsProducts{
+    width: 300px;
+    margin: 50px;
+    background-color: #b29260 ;
+    border-radius: 50px;
+    padding: 20px;
+    transition: transform .25s,box-shadow .25s;
+}
+
+
+.contenedorCardsProducts:hover{
+    transform: translateY(-15px);
+    box-shadow: 10px 0 30px #000;
+}
+
+
+.inputSearch{
+    background-color: #FFEFD5;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
     outline: none;
+    border: none;
+    border-bottom: 4px solid #b29260 ;
+    color: #000;
+    margin-right: 10px;
+    margin-top: 50px;
+}
+
+.inputSearch:focus{
+    outline: none;
+}
+
+
+
+img{
+    box-sizing: border-box;
+    width: 100%;
+    height: 300px;
+    border-radius: 10%;
 }
