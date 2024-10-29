@@ -9,6 +9,8 @@ function MainComponent (){
     const [search, setSearch] = useState('')
     const [productosFiltrados, setProductosFiltrados] = useState([])
     const [limit, setLimit] = useState(1)
+    const [categoriaSeleccionada,setCategoriaSeleccionada] = useState("all")
+    const categoriaMatch = categoriaSeleccionada === "all" || productos.categoria === categoriaSeleccionada;
     let baseURL = 'https://fakestoreapi.com/products?limit=1';
 
     useEffect(()=>{
@@ -33,14 +35,24 @@ function MainComponent (){
 
     const searchChange = (event) => {
         setSearch(event.target.value);
-    }
+    };
 
+    const changeCategoria = (event) => {
+        setCategoriaSeleccionada(event.target.value)
+    };
 
 
     return (
         <>
             <NavBar />
             <div className="inicio">
+                <select onChange={changeCategoria} value={categoriaSeleccionada} name="" id="">
+                    <option value="all">Todas las categorias</option>
+                    <option value="jewelery">Joyeria</option>
+                    <option value="women's clothing">Electronica</option>
+                    <option value="men's clothing">Ropa hombre</option>
+                    <option value="electronics">Ropa de Mujer</option>
+                </select>
                 <input className='inputNumber' type="number" onChange={limitChange} placeholder="Ingresa un numero de productos......"    />
                 <input className='inputSearch' type="text" placeholder="Buscar producto..." value={search} onChange={searchChange}/>
             </div>

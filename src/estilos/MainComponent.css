@@ -73,3 +73,17 @@ img{
     height: 300px;
     border-radius: 10%;
 }
+
+select{
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color:#FFEFD5;
+    color: #000;
+    border: none;
+    border-bottom: 4px solid #b29260;
+}
+
+select:focus{
+    outline: none;
+}
