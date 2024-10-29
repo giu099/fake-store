@@ -9,8 +9,8 @@ function NavBar ( ){
                     <li><h1>FakeStore</h1></li>
                     <div className="containList">    
                         <li><a href="">Home</a></li>
-                        <li><a href="productos">Productos</a></li>
-                        <li><a href="">Contacto</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
                     </div>
                 </ul>
             </nav>
