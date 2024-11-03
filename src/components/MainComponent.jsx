@@ -10,7 +10,7 @@ function MainComponent (){
     const [productosFiltrados, setProductosFiltrados] = useState([])
     const [limit, setLimit] = useState(1)
     const [categoriaSeleccionada,setCategoriaSeleccionada] = useState("all")
-    const categoriaMatch = categoriaSeleccionada === "all" || productos.categoria === categoriaSeleccionada;
+    
     let baseURL = 'https://fakestoreapi.com/products?limit=1';
 
     useEffect(()=>{
@@ -18,15 +18,17 @@ function MainComponent (){
         axios.get(baseURL).then((res) => {
         setProductos(res.data);
         setProductosFiltrados(res.data);
+        
         });
+    
     },[limit]);
 
     useEffect(() => {
-        const results = productos.filter((producto)=>{
-            return producto.title.includes(search);
-        })
+        const results = productos.filter((producto) => categoriaSeleccionada === "all" || producto.category === categoriaSeleccionada).filter((producto) => producto.title.toLowerCase().includes(search.toLowerCase()));
+        
         setProductosFiltrados(results);
-    },[search,productos])
+    }, [search, productos, categoriaSeleccionada]);
+
 
     const limitChange = (event) =>{
         setLimit(event.target.value);
@@ -49,9 +51,9 @@ function MainComponent (){
                 <select onChange={changeCategoria} value={categoriaSeleccionada} name="" id="">
                     <option value="all">Todas las categorias</option>
                     <option value="jewelery">Joyeria</option>
-                    <option value="women's clothing">Electronica</option>
+                    <option value="electronics">Electronica</option>
                     <option value="men's clothing">Ropa hombre</option>
-                    <option value="electronics">Ropa de Mujer</option>
+                    <option value="women's clothing">Ropa de Mujer</option>
                 </select>
                 <input className='inputNumber' type="number" onChange={limitChange} placeholder="Ingresa un numero de productos......"    />
                 <input className='inputSearch' type="text" placeholder="Buscar producto..." value={search} onChange={searchChange}/>
